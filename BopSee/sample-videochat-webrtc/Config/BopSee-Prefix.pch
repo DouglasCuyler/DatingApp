@@ -1,0 +1,116 @@
+//
+//  QBRTCChatSemple-Prefix.pch
+//  QBRTCChatSemple
+//
+//  Created by Andrey Ivanov on 04.12.14.
+//  Copyright (c) 2014 QuickBlox Team. All rights reserved.
+//
+#import <Availability.h>
+
+//0-release, 1-dev
+#define QB_RTC_SAMPLE_MODE 0
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+//My custom
+#import "Config.h"
+#import "AppController.h"
+#import "CommonUtils.h"
+
+#define appController [AppController sharedInstance]
+#define commonUtils [CommonUtils shared]
+
+//Library
+#import "JSON.h"
+#import "UIImageView+AFNetworking.h"
+#import "UIButton+AFNetworking.h"
+#import "ActivityIndicator.h"
+#import "DoAlertView.h"
+
+// User Pages
+#import "UserBaseViewController.h"
+#import "LoginViewController.h"
+
+// Main Pages
+#import "JSWaiter.h"
+#import "BaseViewController.h"
+
+//ViewControllers
+#import "UserImportViewController.h"
+#import "UserInfoViewController.h"
+#import "DashboardViewController.h"
+#import "PreferencesViewController.h"
+#import "ChooseSessionViewController.h"
+#import "MachesViewController.h"
+#import "ChatViewController.h"
+#import "SettingsViewController.h"
+#import "ProfileViewController.h"
+#import "AppSettingsViewController.h"
+#import "WaitingRoomViewController.h"
+#import "ThinkViewController.h"
+#import "AbuseViewController.h"
+#import "WrapViewController.h"
+#import "HelpViewController.h"
+
+#import "MyCallViewController.h"
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import <SystemConfiguration/SystemConfiguration.h>
+#import <MobileCoreServices/MobileCoreServices.h>
+#import <Quickblox/Quickblox.h>
+#import <QuickbloxWebRTC/QuickbloxWebRTC.h>
+
+//QB ViewControllers
+#import "CallViewController.h"
+#import "ChatManager.h"
+#import "IncomingCallViewController.h"
+#import "QMSoundManager.h"
+#import "SVProgressHUD.h"
+#import "UsersDataSource.h"
+#import "QBUUser+IndexAndColor.h"
+#import "Settings.h"
+
+#if (QB_RTC_SAMPLE_MODE == 1)
+
+#import "CocoaLumberjack.h"
+#import "QBRTCEAGLRenderer.h"
+#import "QBRTCFrameConverter.h"
+#import "QBRTCICEServer.h"
+#import "QBRTCAudioTrack.h"
+#import "QBRTCClient.h"
+#import "QBRTCClientDelegate.h"
+#import "QBRTCConfig.h"
+#import "QBRTCLocalAudioTrack.h"
+#import "QBRTCLocalVideoTrack.h"
+#import "QBRTCMediaStream.h"
+#import "QBRTCMediaStreamTrack.h"
+#import "QBRTCRemoteVideoView.h"
+#import "QBRTCSession.h"
+#import "QBRTCTypes.h"
+#import "QBRTCCameraCapture.h"
+#import "QBRTCVideoFrame.h"
+#import "QBRTCVideoTrack.h"
+#import "QBRTCSampleBufferRenderer.h"
+#import "QBRTCSampleBufferView.h"
+#import "QBRTCSoundRouter.h"
+#import "QBRTCTimer.h"
+#import "QBRTCVideoFormat.h"
+#import "QBRTCVideoRenderer.h"
+#import "RTCI420Frame.h"
+#import "RTCVideoRenderer.h"
+#import "QBRTCMediaStreamConfiguration.h"
+#import "QBRTCBitrateTracker.h"
+#import "QBRTCStatsReport.h"
+
+FOUNDATION_EXPORT NSString *const QuickbloxWebRTCFrameworkVersion;
+FOUNDATION_EXPORT NSString *const QuickbloxWebRTCRevision;
+
+#else
+
+
+#endif
+
+
